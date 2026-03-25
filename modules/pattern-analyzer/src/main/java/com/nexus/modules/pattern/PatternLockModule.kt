@@ -19,6 +19,6 @@ class PatternLockModule : NexusModule {
 
     override suspend fun runAnalysis(): ModuleStatus {
         val result = PrivilegeBroker.execute("ls /data/system/gesture.key")
-        return if (result.success) ModuleStatus.Secure("File found") else ModuleStatus.Vulnerable("File not accessable")
+        return if (result.success) ModuleStatus.Secure("File found") else ModuleStatus.Vulnerable("File not accessible")
     }
 }
