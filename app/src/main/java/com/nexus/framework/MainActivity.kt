@@ -6,7 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import rikka.shizuku.Shizuku
 import com.nexus.framework.ui.NexusMainScreen
-import com.nexus.framework.ui.theme.NexusTheme
+import com.nexus.framework.ui.theme.NexusFrameworkTheme
 
 class MainActivity : ComponentActivity() {
     private val SHIZUKU_CODE = 1001
@@ -15,7 +15,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         checkShizuku()
         setContent {
-            NexusTheme { NexusMainScreen() }
+            NexusFrameworkTheme { NexusMainScreen() }
         }
     }
 
